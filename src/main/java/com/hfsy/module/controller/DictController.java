@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/dicts")
-public class DictController {
+public class DictController extends BaseController {
 
 	@Autowired
 	private DictDao dictDao;
@@ -29,7 +29,6 @@ public class DictController {
 			throw new IllegalArgumentException("类型和key已存在");
 		}
 		dictDao.save(dict);
-
 		return dict;
 	}
 

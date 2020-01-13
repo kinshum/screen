@@ -23,7 +23,7 @@ import java.util.Map;
 @Api(tags = "excel下载")
 @RestController
 @RequestMapping("/excels")
-public class ExcelController {
+public class ExcelController extends BaseController {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

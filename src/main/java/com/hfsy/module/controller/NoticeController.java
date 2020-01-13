@@ -21,7 +21,7 @@ import java.util.List;
 @Api(tags = "公告")
 @RestController
 @RequestMapping("/notices")
-public class NoticeController {
+public class NoticeController extends BaseController {
 
 	@Autowired
 	private NoticeDao noticeDao;

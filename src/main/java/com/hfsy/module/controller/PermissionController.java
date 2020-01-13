@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 @Api(tags = "权限")
 @RestController
 @RequestMapping("/permissions")
-public class PermissionController {
+public class PermissionController extends BaseController {
 
 	@Autowired
 	private PermissionDao permissionDao;
@@ -103,7 +103,6 @@ public class PermissionController {
 	@PreAuthorize("hasAuthority('sys:menu:query')")
 	public List<Permission> parentMenu() {
 		List<Permission> parents = permissionDao.listParents();
-
 		return parents;
 	}
 

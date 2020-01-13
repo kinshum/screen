@@ -24,7 +24,7 @@ import java.util.List;
 @Api(tags = "角色")
 @RestController
 @RequestMapping("/roles")
-public class RoleController {
+public class RoleController extends BaseController {
 
 	@Autowired
 	private RoleService roleService;

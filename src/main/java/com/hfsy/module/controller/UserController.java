@@ -27,9 +27,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-public class UserController {
+public class UserController extends BaseController {
 
-	private static final Logger log = LoggerFactory.getLogger("adminLogger");
+
 
 	@Autowired
 	private UserService userService;
@@ -67,7 +67,7 @@ public class UserController {
 		userDto.setHeadImgUrl(headImgUrl);
 
 		userService.updateUser(userDto);
-		log.debug("{}修改了头像", user.getUsername());
+		logger.debug("{}修改了头像", user.getUsername());
 	}
 
 	@LogAnnotation

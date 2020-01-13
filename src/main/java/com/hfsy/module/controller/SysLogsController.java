@@ -19,7 +19,7 @@ import java.util.List;
 @Api(tags = "日志")
 @RestController
 @RequestMapping("/logs")
-public class SysLogsController {
+public class SysLogsController extends BaseController {
 
 	@Autowired
 	private SysLogsDao sysLogsDao;

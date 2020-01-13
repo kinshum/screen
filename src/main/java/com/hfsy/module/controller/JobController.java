@@ -24,7 +24,7 @@ import java.util.*;
 @Api(tags = "定时任务")
 @RestController
 @RequestMapping("/jobs")
-public class JobController {
+public class JobController extends BaseController {
 
 	@Autowired
 	private JobService jobService;
@@ -107,16 +107,13 @@ public class JobController {
 			if (str.contains(".")) {
 				continue;
 			}
-
 			Class<?> clazz = getClass(str);
 			if (clazz.isAssignableFrom(Controller.class) || clazz.isAnnotationPresent(RestController.class)) {
 				continue;
 			}
-
 			list.add(str);
 		}
 		list.sort((l1, l2) -> l1.compareTo(l2));
-
 		return list;
 	}
 
@@ -136,7 +133,6 @@ public class JobController {
 				}
 			}
 		});
-
 		return names;
 	}
 
@@ -146,7 +142,6 @@ public class JobController {
 		if (AopUtils.isAopProxy(object)) {
 			clazz = clazz.getSuperclass();
 		}
-
 		return clazz;
 	}
 
