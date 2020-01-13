@@ -51,9 +51,6 @@ public class DruidConfig {
 
 	/**
 	 * 数据源配置
-	 * 
-	 * @author 小威老师
-	 *
 	 */
 	@ConfigurationProperties(prefix = "spring.datasource")
 	public class DataSourceProperties {
