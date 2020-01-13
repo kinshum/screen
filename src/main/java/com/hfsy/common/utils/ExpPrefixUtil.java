@@ -1,0 +1,1 @@
+package com.hfsy.common.utils;/** * @description: 异常码的前缀 * @author: jensen * @date: created by 2019/9/11 0:31 */public class ExpPrefixUtil {    /**     * 通用异常码前缀     */    public static final String ComExpPrefix = "10";    /**     * 模块异常码前缀     */    public static final String ModuleExpPrefix = "20";}
