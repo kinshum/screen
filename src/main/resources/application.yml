@@ -18,6 +18,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
+    removeAbandonedTimeout: 1800
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
